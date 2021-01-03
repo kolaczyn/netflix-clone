@@ -12,8 +12,8 @@ import {
 
 function Jumbotron({ children, direction = "row", ...restProps }) {
   return (
-    <Item direction={direction}>
-      <Inner>{children}</Inner>
+    <Item>
+      <Inner direction={direction}>{children}</Inner>
     </Item>
   );
 }
@@ -38,6 +38,7 @@ Jumbotron.SubTitle = function JumbotronSubTitle({ children, ...restProps }) {
 Jumbotron.Image = function JumbotronImage({ ...restProps }) {
   return <Image {...restProps} />;
 };
+
 // this looks dumb, can I do something about it?
 Jumbotron.propTypes = {
   children: PropTypes.node,
