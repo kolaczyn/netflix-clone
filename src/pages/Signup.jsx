@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Route, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { FirebaseContext } from "../context/firebase";
 import FooterContainer from "../containers/Footer";
 import HeaderContainer from "../containers/Header";
