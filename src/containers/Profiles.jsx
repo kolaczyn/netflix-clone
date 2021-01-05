@@ -1,7 +1,7 @@
 import React from "react";
 import { Header, Profiles } from "../components";
 import * as ROUTES from "../constants/routes";
-import { useAuthListener } from "../hooks";
+// import { useAuthListener } from "../hooks";
 import logo from "../logo.svg";
 
 export default function SelectProfileContainer({ user, setProfile }) {

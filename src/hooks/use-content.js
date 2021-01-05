@@ -1,5 +1,4 @@
 import { useEffect, useState, useContext } from 'react'
-import { unstable_renderSubtreeIntoContainer } from 'react-dom'
 
 import { FirebaseContext } from '../context/firebase'
 
@@ -8,7 +7,7 @@ export default function useContent(target) {
   
   // should I move getting the firebase object into useEffect?
   const { firebase } = useContext(FirebaseContext)
-
+  
   useEffect(() => {
     firebase
       .firestore()
@@ -23,7 +22,8 @@ export default function useContent(target) {
         setContent(allContent);
       })
       .catch(err => console.log(err.message))
-  }, []);
+      // I've added the dependencies here
+  }, [firebase, target]);
 
   return { [target]: content }
 }
