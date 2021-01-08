@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.8",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.6.0",
     "firebase": "^8.2.1",
     "fuse.js": "^6.4.5",
     "normalize.css": "^8.0.1",
@@ -18,15 +15,11 @@
   },
   "jest": {
     "collectCoverageFrom": [
+      "<rootDir>/src/**/*.jsx",
       "<rootDir>/src/**/*.js",
-      "!<rootDir>/src/app.js",
-      "!<rootDir>/src/helpers/routes.js",
-      "!<rootDir>/src/lib/firebase.js",
-      "!<rootDir>/src/lib/firebase.prod.js",
-      "!<rootDir>/src/index.js",
+      "!<rootDir>/src/App.jsx",
+      "!<rootDir>/src/index.jsx",
       "!<rootDir>/src/seed.js",
-      "!<rootDir>/src/utils/index.js",
-      "!<rootDir>/src/pages/index.js",
       "!<rootDir>/src/global-styles.js",
       "!<rootDir>/src/components/index.js",
       "!<rootDir>/src/firebase.prod.js",
@@ -41,10 +34,10 @@
         "statements": 90
       }
     },
-    "coverageReporters": [
-      "html",
-      "text"
-    ]
+      "coverageReporters": [
+        "html",
+        "text"
+      ]
   },
   "scripts": {
     "start": "react-scripts start",
@@ -72,6 +65,9 @@
   },
   "devDependencies": {
     "eslint": "^7.17.0",
-    "eslint-plugin-react": "^7.22.0"
+    "eslint-plugin-react": "^7.22.0",
+    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.0"
   }
 }
